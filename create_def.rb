@@ -14,4 +14,8 @@ File.open('mruby.def', 'w') do |f|
       f.puts line[/^([A-Za-z_][\w]*)\b/]
     end
   end
+  # append manual exports
+  f.puts "\tmrb_digitmap\tDATA\n"   
+  f.puts "\tmrb_show_version\n"
+  f.puts "\tmrb_show_copyright\n"
 end

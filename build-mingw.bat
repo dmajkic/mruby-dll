@@ -1,6 +1,7 @@
 @echo off
 setlocal
 set MRUBY_DLL_DIR=%cd%
+ruby create_def.rb
 cd mruby
 ruby minirake
 if errorlevel 1 goto :end

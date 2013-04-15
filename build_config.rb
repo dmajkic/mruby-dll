@@ -51,7 +51,9 @@ MRuby::Build.new do |conf|
   conf.gem "#{root}/mrbgems/mruby-eval"
 
   # Ulstra simple HsRegExp
-  conf.gem :github => 'masamitsu-murase/mruby-hs-regexp'
+  conf.gem :github => 'masamitsu-murase/mruby-hs-regexp' do |g|
+  	g.cc.defines << 'HS_REGEXP_ENABLE_BUILT_IN_REGEXP'
+	end
 
   # Generate binaries
   # conf.bins = %w(mrbc)
